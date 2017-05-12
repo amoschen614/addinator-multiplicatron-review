@@ -2,9 +2,10 @@ const add = require('./adder.js');
 
 class TestSuite {
   runTests() {
-    this.testAddPositiveNumbers();
-    this.testAddNegativeNumbers();
-    this.testAddMixedNumbers();
+    Object.getOwnPropertyNames(Object.getPrototypeOf(this))
+        .filter(prop => this(prop) instanceof Function) //only properties with function values remain
+        .filter(prop => prop.indexOf('test') !== -1)    //the word 'test' is found in function name
+        .forEach(testName => this.runTest(testName));   //pass each property value remaining into iterator and call
   }
 
   assertEquals(a, b) {
@@ -13,17 +14,14 @@ class TestSuite {
 
   testAddPositiveNumbers() {
     const result = this.assertEquals(add(5, 7), 12);
-    console.log(result, 'testAddPositiveNumbers');
   }
 
   testAddNegativeNumbers() {
     const result = this.assertEquals(add(-5, -7), -12);
-    console.log(result, 'testAddNegativeNumbers');
   }
 
   testAddMixedNumbers() {
     const result = this.assertEquals(add(5, -7), -2);
-    console.log(result, 'testAddMixedNumbers');
   }
 }
 
