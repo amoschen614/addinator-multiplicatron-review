@@ -2,25 +2,22 @@
 <html>
 
 <head>
+  <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <form id="form-numbers">
-        <div>
-            <label> number 1 </label>
-            <input id="input-num1" type="text" size="3" />
-        </div>
-        <div>
-            <label> number 2</label>
-            <input id="input-num2" type="text" size="3" />
-        </div>
-        <div>
-            <label>sum</label>
-            <span id="sum"></span>
-        </div>
-        <input type="submit" value="calculate" />
-    </form>
+  <form id="form-numbers">
+    <div>
+      <input id="input-num1" type="text" autocomplete="off" />
+    </div>
+    <div>
+      <input id="input-num2" type="text" autocomplete="off" />
+    </div>
+    <hr>    
+    <div class="sum">?</div>
+    <button> calculate </button>
+  </form>
+  <script src="bundle.js"></script>
 </body>
-<script src="bundle.js"></script>
 
 </html>
