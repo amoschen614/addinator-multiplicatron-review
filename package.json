@@ -1,0 +1,13 @@
+{
+  "name": "addinator-multiplicatron-review",
+  "version": "0.1.0",
+  "description": "simple webapp review, not deployed to cloud",
+  "main": "server/server.js",
+  "scripts": {
+    "postinstall": "browserify client/app.js -o client/bundle.js",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "browserify": "^14.3.0"
+  }
+}
