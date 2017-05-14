@@ -2,21 +2,40 @@
 <html>
 
 <head>
+  <title>addinator-multiplicatron review</title>
   <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <form id="form-numbers">
-    <div>
-      <input id="input-num1" type="text" autocomplete="off" />
+  <div id="container">
+    <div id="leftCol">
+      <form class="form-numbers" id="add-form-numbers">
+        <div>
+          <input id="add-input-num1" type="text" autocomplete="off" />
+        </div>
+        <div>
+          <input id="add-input-num2" type="text" autocomplete="off" />
+        </div>
+        <hr>
+        <div class="sum">?</div>
+        <button>add</button>
+      </form>
     </div>
-    <div>
-      <input id="input-num2" type="text" autocomplete="off" />
+    <div id="rightCol">
+      <form class="form-numbers" id="multiply-form-numbers">
+        <div>
+          <input id="multiply-input-num1" type="text" autocomplete="off">
+        </div>
+        <div>
+          <input id="multiply-input-num2" type="text" autocomplete="off">
+        </div>
+        <hr id="end-input">
+        <div id="product" class="product">?</div>
+        <button class="button">multiply</button>
+        <button id="new-factor">add factor</button>
+      </form>
     </div>
-    <hr>    
-    <div class="sum">?</div>
-    <button> calculate </button>
-  </form>
+  </div>
   <script src="bundle.js"></script>
 </body>
 

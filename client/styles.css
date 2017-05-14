@@ -1,20 +1,34 @@
-#form-numbers {
+#leftCol {
+  width: 200px;
+  float: left;
+}
+
+#rightCol {
+  margin-left: 200px;
+}
+
+.clear {
+  clear: both;
+}
+
+.form-numbers {
   width: 200px;
   margin: 0 auto;
   text-align: center;
 }
 
-#form-numbers > div {
+.form-numbers > div {
   padding: 10px 20px;
 }
 
-#form-numbers hr, input[type=text] {
+.form-numbers hr,
+input[type=text] {
   width: 80px;
   font-size: 36px;
   text-align: center;
 }
 
-#form-numbers button {
+.form-numbers button {
   font-size: 36px;
   margin-top: 50px;
 }
@@ -22,4 +36,16 @@
 .sum {
   font-size: 48px;
   font-weight: bold;
+}
+
+.product {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.button {
+  font-size: 36px;
+  margin-top: 50px;
+  margin: 0 auto;
+  text-align: center;
 }
